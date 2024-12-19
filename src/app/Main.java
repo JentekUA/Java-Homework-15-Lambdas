@@ -13,11 +13,11 @@ public class Main {
         };
         System.out.println(operation.operate(40, 2));
 
-        StringManipulator manipulator = string -> string.toLowerCase();
+        StringManipulator manipulator = string -> string.toUpperCase();
         System.out.println(manipulator.manipulate("hello world"));
 
         Function<String, Integer> countFunction = StringListProcessor::countUpperCase;
-        System.out.println(countFunction.apply("hello world"));
+        System.out.println(countFunction.apply("hellO World"));
 
         Supplier<Integer> supplier = () -> RandomNumberGenerator.generateRandomNumber(1, 100);
         System.out.println(supplier.get());
