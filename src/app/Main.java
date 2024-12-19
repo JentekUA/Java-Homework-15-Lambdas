@@ -1,6 +1,7 @@
 package app;
 
 import java.util.function.Function;
+import java.util.function.Supplier;
 
 public class Main {
     public static void main(String[] args) {
@@ -17,5 +18,8 @@ public class Main {
 
         Function<String, Integer> countFunction = StringListProcessor::countUpperCase;
         System.out.println(countFunction.apply("hello world"));
+
+        Supplier<Integer> supplier = () -> RandomNumberGenerator.generateRandomNumber(1, 100);
+        System.out.println(supplier.get());
     }
 }
