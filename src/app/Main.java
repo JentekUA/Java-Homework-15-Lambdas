@@ -11,15 +11,15 @@ public class Main {
                 return a + b;
             }
         };
-        System.out.println(operation.operate(40, 2));
+        System.out.printf("Math operation: %s%n", operation.operate(40, 2));
 
         StringManipulator manipulator = string -> string.toUpperCase();
-        System.out.println(manipulator.manipulate("hello world"));
+        System.out.printf("String manipulator: %s%n", manipulator.manipulate("hello world"));
 
         Function<String, Integer> countFunction = StringListProcessor::countUpperCase;
-        System.out.println(countFunction.apply("hellO World"));
+        System.out.printf("Count function: %s%n", countFunction.apply("hellO World"));
 
         Supplier<Integer> supplier = () -> RandomNumberGenerator.generateRandomNumber(1, 100);
-        System.out.println(supplier.get());
+        System.out.printf("Random int supplier: %s%n", supplier.get());
     }
 }
