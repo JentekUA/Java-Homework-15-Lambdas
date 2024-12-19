@@ -1,5 +1,7 @@
 package app;
 
+import java.util.function.Function;
+
 public class Main {
     public static void main(String[] args) {
         MathOperation operation = new MathOperation() {
@@ -12,5 +14,8 @@ public class Main {
 
         StringManipulator manipulator = string -> string.toLowerCase();
         System.out.println(manipulator.manipulate("hello world"));
+
+        Function<String, Integer> countFunction = StringListProcessor::countUpperCase;
+        System.out.println(countFunction.apply("hello world"));
     }
 }
