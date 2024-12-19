@@ -10,6 +10,7 @@ public class Main {
         };
         System.out.println(operation.operate(40, 2));
 
-
+        StringManipulator manipulator = string -> string.toLowerCase();
+        System.out.println(manipulator.manipulate("hello world"));
     }
 }
